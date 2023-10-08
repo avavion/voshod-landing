@@ -14,6 +14,10 @@
   --yellow-900: #936a2c;
   --white: #ffffff;
   --black: #0d0c13;
+  --gray: #343434;
+
+  --animation-duration: 0.3s;
+  --animation-effect: ease-in-out;
 }
 
 body {
@@ -23,6 +27,7 @@ body {
 
 a {
   text-decoration: none;
+  display: inline-flex;
   color: var(--yellow-200);
 }
 

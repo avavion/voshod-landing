@@ -9,6 +9,7 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    
 
     &__image {
       position: absolute;
@@ -27,6 +28,8 @@
       z-index: 3;
       padding: calc(3 * var(--container-offset));
       height: 100%;
+
+    
     }
 
     &__title {

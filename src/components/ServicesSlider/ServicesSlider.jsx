@@ -51,7 +51,7 @@ const ServicesSlider = () => {
         <div className='services__wrapper'>
           <Swiper
             className='services-slider'
-            slidesPerView='auto'
+            slidesPerView='3'
             loop={true}
             centeredSlides
           >

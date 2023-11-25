@@ -8,7 +8,6 @@ import image1 from "../../assets/images/1.jpg";
 import image2 from "../../assets/images/2.jpg";
 import image3 from "../../assets/images/5.jpg";
 
-
 const CARDS = [
   {
     id: 1,
@@ -33,40 +32,40 @@ const CARDS = [
   },
 ];
 
-
 const Projects = () => {
   return (
-    <section className="projects" id="projects">
-      <div className="projects-header">
+    <section className='projects' id='projects'>
+      <div className='projects-header'>
         <Container>
-          <div className="wrapper">
-            <h2 className="heading">Наши проекты</h2>
+          <div className='wrapper'>
+            <h2 className='heading'>Наши проекты</h2>
           </div>
         </Container>
       </div>
 
       <Container>
-        <div className="projects-content">
-        <div className="cards">
-          {CARDS.map((cards, index) => {
-            return (
-              <div className="card">
-                <h3>{cards.title}</h3>
-                <Link href="https://avavion.ru" target="_blank">
-                  <p class="card-p">{cards.text} </p>
-                </Link>
-                <Image
-                  src={cards.image_url}
-                  alt={cards.title}
-                  className="card__image"
-                />
-              </div>
-            );
-          })}
-        </div>
-        <Link href="/works">
-          <span>Смотреть все проекты</span>
-        </Link>
+        <div className='projects-content'>
+          <div className='cards'>
+            {CARDS.map((cards, index) => {
+              return (
+                <div key={index} className='card'>
+                  <h3>{cards.title}</h3>
+                  <Link href='https://avavion.ru' target='_blank'>
+                    <span className='card-p'>{cards.text} </span>
+                  </Link>
+                  <Image
+                    src={cards.image_url}
+                    alt={cards.title}
+                    objectFit='cover'
+                    className='card__image'
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <Link href='/works'>
+            <span>Смотреть все проекты</span>
+          </Link>
         </div>
       </Container>
     </section>

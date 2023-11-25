@@ -6,7 +6,6 @@ import Image from "next/image";
 import image1 from "../../assets/images/12.jpg";
 import image2 from "../../assets/images/11.jpg";
 
-
 const CARDS = [
   {
     id: 1,
@@ -24,28 +23,28 @@ const CARDS = [
 
 const Detailing = () => {
   return (
-    <section className="detailing" id="detailing">
-      <div className="detailing-header">
+    <section className='detailing' id='detailing'>
+      <div className='detailing-header'>
         <Container>
-          <div className="wrapper">
+          <div className='wrapper'>
             <h2>Детейлинг</h2>
           </div>
         </Container>
       </div>
 
       <Container>
-        <div className="cards">
+        <div className='cards'>
           {CARDS.map((cards, index) => {
-            return(
-              <div className="card">
+            return (
+              <div key={index} className='card'>
                 <Image
-                src={cards.image_url}
-                alt={cards.title}
-                className="card-img"
+                  src={cards.image_url}
+                  alt={cards.title}
+                  className='card-img'
                 />
-                <div className="card-info">
-                <h2>{cards.title}</h2>
-                <p>{cards.text}</p>
+                <div className='card-info'>
+                  <h2>{cards.title}</h2>
+                  <p>{cards.text}</p>
                 </div>
               </div>
             );

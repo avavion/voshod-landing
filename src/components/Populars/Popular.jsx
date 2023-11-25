@@ -24,31 +24,31 @@ const POPULARS = [
 
 const Popular = () => {
   return (
-    <section className="popular" id="popular">
-      <div className="popular-header">
+    <section className='popular' id='popular'>
+      <div className='popular-header'>
         <Container>
-          <div className="wrapper">
+          <div className='wrapper'>
             <h2>Популярно</h2>
           </div>
         </Container>
       </div>
 
       <Container>
-        <div className="cards">
+        <div className='cards'>
           {POPULARS.map((card, index) => {
             return (
-              <div className="card">
-                <div className="card__bg">
+              <div key={index} className='card'>
+                <div className='card__bg'>
                   <Image
                     src={card.image_url}
                     alt={card.title}
-                    objectFit="cover"
+                    objectFit='cover'
                   />
                 </div>
-                <div className="card-info">
+                <div className='card-info'>
                   <h2>{card.title}</h2>
                   <p>{card.text}</p>
-                  <Link href="/catalog" target="_blank">
+                  <Link href='/catalog' target='_blank'>
                     <span>Смотреть</span>
                   </Link>
                 </div>

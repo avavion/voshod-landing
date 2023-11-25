@@ -9,7 +9,6 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    
 
     &__image {
       position: absolute;
@@ -20,7 +19,7 @@
 
       filter: grayscale(0) blur(2px);
 
-      transition: filter 0.5s ease-in-out;
+      transition: filter var(--anination-duration) var(--animation-effect);
     }
 
     &-content {
@@ -28,8 +27,6 @@
       z-index: 3;
       padding: calc(3 * var(--container-offset));
       height: 100%;
-
-    
     }
 
     &__title {

@@ -48,16 +48,16 @@ const Projects = () => {
       <Container>
         <div className="projects-content">
         <div className="cards">
-          {CARDS.map((cards, index) => {
+          {CARDS.map((card, index) => {
             return (
-              <div className="card">
-                <h3>{cards.title}</h3>
+              <div className="card" key={card.id}>
+                <h3>{card.title}</h3>
                 <Link href="https://avavion.ru" target="_blank">
-                  <p class="card-p">{cards.text} </p>
+                  <p class="card-p">{card.text} </p>
                 </Link>
                 <Image
-                  src={cards.image_url}
-                  alt={cards.title}
+                  src={card.image_url}
+                  alt={card.title}
                   className="card__image"
                 />
               </div>

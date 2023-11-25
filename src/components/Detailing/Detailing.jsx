@@ -35,17 +35,17 @@ const Detailing = () => {
 
       <Container>
         <div className="cards">
-          {CARDS.map((cards, index) => {
+          {CARDS.map((card, index) => {
             return(
-              <div className="card">
+              <div className="card" key={card.id}>
                 <Image
-                src={cards.image_url}
-                alt={cards.title}
+                src={card.image_url}
+                alt={card.title}
                 className="card-img"
                 />
                 <div className="card-info">
-                <h2>{cards.title}</h2>
-                <p>{cards.text}</p>
+                <h2>{card.title}</h2>
+                <p>{card.text}</p>
                 </div>
               </div>
             );

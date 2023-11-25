@@ -37,7 +37,7 @@ const Popular = () => {
         <div className="cards">
           {POPULARS.map((card, index) => {
             return (
-              <div className="card">
+              <div className="card" key={card.id}>
                 <div className="card__bg">
                   <Image
                     src={card.image_url}

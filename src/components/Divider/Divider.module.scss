@@ -1,0 +1,9 @@
+.divider {
+  margin: calc(1.5 * var(--container-offset)) 0;
+  height: 3px;
+  background: var(--white);
+  width: 30px;
+  -webkit-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+}

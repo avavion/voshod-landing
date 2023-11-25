@@ -1,0 +1,10 @@
+@mixin gradient-text() {
+  background-color: var(--yellow-100);
+  background-image: linear-gradient(
+    90deg,
+    var(--yellow-100),
+    var(--yellow-900)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

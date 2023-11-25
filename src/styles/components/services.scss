@@ -1,0 +1,64 @@
+.services {
+  &-slider {
+    height: 600px;
+  }
+  .service {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    
+
+    &__image {
+      position: absolute;
+
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      filter: grayscale(0) blur(2px);
+
+      transition: filter 0.5s ease-in-out;
+    }
+
+    &-content {
+      position: relative;
+      z-index: 3;
+      padding: calc(3 * var(--container-offset));
+      height: 100%;
+
+    
+    }
+
+    &__title {
+      font-size: calc(3 * var(--font-size));
+      text-transform: uppercase;
+      line-height: 0.8;
+      margin: 0;
+    }
+
+    &__text {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      font-size: 20px;
+      line-height: 1.5;
+      font-size: calc(1.5 * var(--font-size));
+    }
+
+    &:hover {
+      .divider {
+        width: 100%;
+      }
+
+      .service__image {
+        filter: grayscale(1) blur(0);
+      }
+
+      .service__text {
+        opacity: 1;
+      }
+    }
+  }
+}

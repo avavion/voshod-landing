@@ -1,0 +1,64 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-size: 16px;
+
+  --yellow-100: #e1c764;
+  --yellow-200: #d1ab35;
+  --yellow-900: #936a2c;
+  --white: #ffffff;
+  --black: #0d0c13;
+  --gray: #343434;
+
+  --animation-duration: 0.3s;
+  --animation-effect: ease-in-out;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+a {
+  text-decoration: none;
+  display: inline-flex;
+  color: var(--yellow-200);
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.container {
+  max-width: var(--container-width);
+  padding: 0 var(--container-offset);
+  margin: 0 auto;
+}
+
+@for $i from 0 through 10 {
+  .t-#{$i} {
+    top: #{$i * 10}px;
+  }
+
+  .l-#{$i} {
+    left: #{$i * 10};
+  }
+
+  .r-#{$i} {
+    right: #{$i * 10};
+  }
+
+  .b-#{$i} {
+    bottom: #{$i * 10};
+  }
+}

@@ -1,10 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import Container from "../Container/Container";
 import Image from "next/image";
-i
-
 import image1 from "../../assets/images/quarant.svg";
 import image2 from "../../assets/images/settings.svg";
 import image3 from "../../assets/images/top.svg";
@@ -47,29 +44,28 @@ const FEATURES = [
 
 const Features = () => {
   return (
-    <section className="features">
-      <div className="features-header">
+    <section className='features'>
+      <div className='features-header'>
         <Container>
-          <div className="wrapper">
+          <div className='wrapper'>
             <h2>Преимущества</h2>
           </div>
         </Container>
       </div>
 
       <Container>
-        <div className="cards">
+        <div className='cards'>
           {FEATURES.map((feature, index) => {
             return (
-              <div className="card" key={feature.id}>
+              <div className='card' key={feature.id}>
                 <Image
                   src={feature.image_url}
                   alt={feature.title}
-                  objectFit="cover"
-                  className="card-img"
+                  className='card-img'
                 />
-                <div className="card-info">
+                <div className='card-info'>
                   <h2>{feature.title}</h2>
-                  <Divider/>
+                  <Divider />
                   <p>{feature.text}</p>
                 </div>
               </div>
